@@ -6,10 +6,7 @@ import lombok.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
-@Setter
 public class RestaurantDTO {
-
 
     private int id;
     private String name;

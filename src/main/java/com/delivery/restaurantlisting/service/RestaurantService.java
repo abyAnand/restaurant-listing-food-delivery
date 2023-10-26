@@ -33,6 +33,6 @@ public class RestaurantService {
 
     public ResponseEntity<RestaurantDTO> fetchRestaurantById(Integer id){
         Optional<Restaurant> restaurant = restaurantRepository.findById(id);
-        return restaurant.map(value -> new ResponseEntity<>(RestaurantMapper.INSTANCE.mapRestaurantToRestaurantDTO(value), HttpStatus.OK)).orElseGet(() -> new ResponseEntity<>(null, HttpStatus.NOT_FOUND));
+       return restaurant.map(value -> new ResponseEntity<>(RestaurantMapper.INSTANCE.mapRestaurantToRestaurantDTO(value), HttpStatus.OK)).orElseGet(() -> new ResponseEntity<>(null, HttpStatus.NOT_FOUND));
     }
 }
